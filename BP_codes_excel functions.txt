@@ -1,0 +1,23 @@
+if(#form/measure_clients_biood_pressure/Reg_systolic_bp < 90, 1, 
+if(#form/measure_clients_biood_pressure/Reg_systolic_bp >= 90 and #form/measure_clients_biood_pressure/Reg_systolic_bp <= 120, 0, 
+if(#form/measure_clients_biood_pressure/Reg_systolic_bp > 120 and #form/measure_clients_biood_pressure/Reg_systolic_bp <= 139, 2, 
+if(#form/measure_clients_biood_pressure/Reg_systolic_bp >= 140 and #form/measure_clients_biood_pressure/Reg_systolic_bp <= 159, 3, 
+if(#form/measure_clients_biood_pressure/Reg_systolic_bp >= 160, 4, ' ')))))
+
+
+
+
+...............................Diastolic bp_codes..................
+
+if(#form/measure_clients_biood_pressure/Reg_diastolic_BP < 60, 1, 
+if(#form/measure_clients_biood_pressure/Reg_diastolic_BP >= 60 and #form/measure_clients_biood_pressure/Reg_diastolic_BP <= 80, 0, 
+if(#form/measure_clients_biood_pressure/Reg_diastolic_BP > 80 and #form/measure_clients_biood_pressure/Reg_diastolic_BP <= 89, 2, 
+if(#form/measure_clients_biood_pressure/Reg_diastolic_BP >= 90 and #form/measure_clients_biood_pressure/Reg_diastolic_BP <= 99, 3, 
+if(#form/measure_clients_biood_pressure/Reg_diastolic_BP >= 100, 4, ' ')))))
+
+................................for displaying HTN_stage..........................
+
+if	(#form/measure_clients_biood_pressure/Sys_bp_reg >= #form/measure_clients_biood_pressure/Dia_bp_reg, 
+	#form/measure_clients_biood_pressure/Sys_bp_reg, #form/measure_clients_biood_pressure/Dia_bp_reg)
+	
+	
